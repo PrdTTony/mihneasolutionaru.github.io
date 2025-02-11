@@ -365,17 +365,6 @@
       </form>
     </section>
 
-    <script>
-      document.getElementById("transport-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        const formData = new FormData(this);
-        for (let pair of formData.entries()) {
-          console.log(pair[0] + ": " + pair[1]);
-        }
-        this.submit();
-      });
-    </script>
-
 
     <!-- REQUEST FORM -->
     <div style="height: 100px;"></div>
