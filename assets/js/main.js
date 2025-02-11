@@ -79,23 +79,4 @@ document.onmousemove = e => {
 
 //REQUEST FORM 
 
-document.getElementById('transport-form').addEventListener('submit', function (e) {
-  // Previne comportamentul implicit de reîncărcare a paginii
-
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    cargoType: document.getElementById('cargo-type').value,
-    //quantity: document.getElementById('quantity').value,
-    details: document.getElementById('details').value,
-  };
-
-  console.log('Cererea de transport:', formData);
-
-  // Poți înlocui următorul cod cu o solicitare către un server:
-  document.getElementById('transport-form').reset();
-});
-
-
 
