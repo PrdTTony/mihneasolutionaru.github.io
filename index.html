@@ -310,14 +310,14 @@
 
     <!-- REQUEST FORM -->
 
-    <section id="transport-request-form">
+   <section id="transport-request-form">
       <h2>Fă o cerere de transport</h2>
-      <form id="transport-form" action="https://formsubmit.co/contact@fixlatimp.ro" method="POST">
+      <form id="transport-form" onsubmit="sendEmail(); reset(); return false">
 
         <label for="name">Nume complet:</label>
 
         <!-- RECOMANDARI -->
-        <input type="hidden" name="access_key" value="c32ba925-0299-4c3c-9c4e-11183b9de6f1">
+        <!-- <input type="hidden" name="access_key" value="c32ba925-0299-4c3c-9c4e-11183b9de6f1"> -->
         <!-- RECOMANDARI -->
 
         <input type="text" id="name" name="Nume" placeholder="Introduceți numele complet" required>
@@ -354,6 +354,23 @@
 
         <button type="submit">Trimite cererea</button>
       </form>
+
+      <script> src = "https://smtpjs.com/v3/smtp.js" </script>
+      <script>
+        function sendEmail() {
+          Email.send({
+            Host: "smtp.fixlatimp.ro",
+            Username: "contact@fixlatimp.ro",
+            Password: "Gargamel-2005",
+            To: 'contact@fixlatimp.ro',
+            From: "FixLaTimp@website.ro",
+            Subject: "Cerere noua de transport",
+            Body: "And this is the body"
+          }).then(
+            message => alert(message)
+          );
+        }
+      </script>
     </section>
 
 
